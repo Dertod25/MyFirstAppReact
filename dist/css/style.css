@@ -1,0 +1,136 @@
+/*===Common styles===*/
+body {
+
+    background-color: #000;
+}
+
+h2 {
+    color: #FF0000;
+}
+
+/*===End common styles===*/
+
+/*===Styles for SignIn and SignUp===*/
+.form-signin {
+    max-width: 90%;
+    padding: 15px;
+    margin: 10px auto;
+}
+
+.form-signin-heading {
+    text-align: center;
+}
+
+.form-signin input {
+    margin: 10px 0;
+}
+
+.text1, .text2 {
+
+    color: #FF0000;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+.text1 {
+    -webkit-animation-name: text1;
+}
+
+.text2 {
+    -webkit-animation-name: text2;
+}
+
+@-webkit-keyframes text1 { /* Safari и Chrome */
+    0% {
+        opacity: 0.99;
+        text-shadow: 0 0 80px #FF0000, 0 0 30px #B22222, 0 0 6px #8B0000;
+    }
+    100% {
+        opacity: 0.4;
+        text-shadow: none;
+    }
+}
+
+@-webkit-keyframes text2 { /* Safari и Chrome */
+    0%, 12%, 18.999%, 23%, 31.999%, 37%, 44.999%, 46%, 49.999%, 51%, 58.999%, 61%, 68.999%, 71%, 85.999%, 96%, 100% {
+        opacity: 0.99;
+        text-shadow: 0 0 80px #FF0000, 0 0 30px #B22222, 0 0 6px #8B0000;
+    }
+    19%, 22.99%, 32%, 36.999%, 45%, 45.999%, 50%, 50.99%, 59%, 60.999%, 69%, 70.999%, 86%, 95.999% {
+        opacity: 0.4;
+        text-shadow: none;
+    }
+}
+
+.door {
+    border: 10px solid #FF0000;
+    border-bottom: none;
+    height: 80vh;
+    position: relative;
+}
+
+.door button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.rotate {
+    position: absolute;
+    right: 40px;
+    top: 45%;
+    display: inline-block;
+
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    transform-origin: bottom right;
+    -webkit-transition: -webkit-transform 1.5s;
+
+    -moz-transition: -moz-transform 1.5s;
+
+    -ms-transition: -moz-transform 1.5s;
+
+    -o-transition: -o-transform 1.5s;
+
+    transition: transform 1.5s;
+}
+
+.rotate:hover {
+    text-decoration: none;
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+
+    -webkit-transition: -webkit-transform 1.5s;
+
+    -moz-transition: -moz-transform 1.5s;
+
+    -ms-transition: -moz-transform 1.5s;
+
+    -o-transition: -o-transform 1.5s;
+
+    transition: transform 1.5s;
+}
+
+/*===End styles for SignIn and SignUp===*/
+
+/*===Styles for Profile===*/
+
+.profile {
+    width: 50%;
+    display: inline-block;
+}
+
+/*===End styles for Profile===*/
+
+
