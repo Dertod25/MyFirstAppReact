@@ -1,11 +1,7 @@
 import React, {Component} from 'react'
 import {Link, browserHistory} from 'react-router'
 export default class SignIn extends Component {
-    static onEnter(nextState, replace) {
-        if (localStorage.getItem("user")) {
-            replace('/')
-        }
-    };
+
 
     constructor(props) {
         super(props);
@@ -52,6 +48,7 @@ export default class SignIn extends Component {
                                 type="text"
                                 className="form-control"
                                 placeholder="Login"
+                                defaultValue=""
                                 ref={(input) => {
                                     this.login = input;
                                 }}

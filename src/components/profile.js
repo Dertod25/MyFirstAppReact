@@ -17,11 +17,14 @@ export default class Profile extends Component {
             <div className='container'>
                 <div className="row">
                     <div className="nav column col-xs-10 col-md-6   col-xs-offset-1 col-md-offset-3">
-                        <Link to="/signup"
+                        <Link to="/list"
                               className="btn btn-lg btn-danger "
                         >List
                         </Link>
-                        <SignOut/>
+                        <Link to="#"
+                              className="btn btn-lg btn-danger "
+                        >ChangeProfile
+                        </Link>
                     </div>
                     <div className="column col-xs-10 col-md-6   col-xs-offset-1 col-md-offset-3 ">
 
@@ -30,6 +33,9 @@ export default class Profile extends Component {
                             {userProfile}
                         </ul>
                     </div>
+                    {this.props.children}
+                    <SignOut/>
+
                 </div>
             </div>
         )

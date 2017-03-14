@@ -3,13 +3,6 @@ import {Link} from 'react-router'
 import SignOut from './SignOut'
 export default class List extends Component {
 
-    static onEnter(nextState, replace) {
-
-        if (!localStorage.getItem("user")) {
-            replace('/signin')
-        }
-
-    }
 
     render() {
         let arrKey = [];
@@ -20,6 +13,7 @@ export default class List extends Component {
                 arrKey.push(key)
             }
         }
+        // let arrKey= this.props.params.list;
         let userList = arrKey.map(function (log, id) {
             let login = log.split('_')[1];
             return (
