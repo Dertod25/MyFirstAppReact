@@ -4,7 +4,7 @@ body {
     background-color: #000;
 }
 
-h2 {
+h1,h2 {
     color: #FF0000;
 }
 
@@ -12,9 +12,9 @@ h2 {
 
 /*===Styles for SignIn and SignUp===*/
 .form-signin {
-    max-width: 90%;
-    padding: 15px;
-    margin: 10px auto;
+    /*max-width: 90%;*/
+    padding: 15px 0;
+    margin: 0 auto;
 }
 
 .form-signin-heading {
@@ -124,12 +124,16 @@ h2 {
 
 /*===End styles for SignIn and SignUp===*/
 
-/*===Styles for Profile===*/
+/*===Styles for User===*/
 
-.profile {
-    width: 50%;
-    display: inline-block;
+.btn-sign-out{
+    margin-top: 20px ;
 }
+
+/*.profile {*/
+    /*width: 50%;*/
+    /*display: inline-block;*/
+/*}*/
 
 /*===End styles for Profile===*/
 

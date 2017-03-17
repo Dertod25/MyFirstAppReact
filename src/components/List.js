@@ -1,25 +1,17 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router'
-import SignOut from './SignOut'
 export default class List extends Component {
 
-
     render() {
-        let arrKey = [];
-        let lsl = localStorage.length;
-        for (let i = 0; i < lsl; i++) {
-            let key = localStorage.key(i);
-            if (key.indexOf("mask_") == 0) {
-                arrKey.push(key)
-            }
+        let arrKey = [...this.props.userList.keys()];
+        function filterUser(value) {
+            if (value !== "user")return value ;
         }
-        // let arrKey= this.props.params.list;
-        let userList = arrKey.map(function (log, id) {
-            let login = log.split('_')[1];
+        let filtered =arrKey.filter(filterUser);
+        let users = filtered.map(function (log, id) {
             return (
-                <li className="list-group-item" key={id}>{login}</li>
+                <li className="list-group-item" key={id}>{log}</li>
             )
-
         });
         return (
             <div className='container'>
@@ -29,17 +21,15 @@ export default class List extends Component {
                               className="btn btn-lg btn-danger "
                         >Profile
                         </Link>
-                        <SignOut/>
                     </div>
                     <div className="column col-xs-10 col-md-6   col-xs-offset-1 col-md-offset-3 ">
                         <ul className="list-group">
                             <h2 className='list-group-heading'>This is the list of those who managed to get here</h2>
-                            {userList}
+                            {users}
                         </ul>
                     </div>
                 </div>
             </div>
         )
     }
-};
-
+}

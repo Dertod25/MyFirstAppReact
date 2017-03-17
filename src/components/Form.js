@@ -7,20 +7,30 @@ export default class Form extends Component {
     };
 
     registration() {
-
-        let login = this.login.value;
-        let email = this.email.value;
-        let password = this.password.value;
-        let firstName = this.firstName.value;
-        let lastName = this.lastName.value;
-        let user = {
-            login,
-            password,
-            email,
-            firstName,
-            lastName
-        }
-        this.props.setUser(user)
+console.log(this.props)
+        // let login = this.login.value;
+        // let email = this.email.value;
+        // let password = this.password.value;
+        // let firstName = this.firstName.value;
+        // let lastName = this.lastName.value;
+        //
+        // const {userlist}=this.props
+        // if (!userlist.get(login)) {
+        //     let user = {
+        //         login,
+        //         password,
+        //         email,
+        //         firstName,
+        //         lastName
+        //     }
+        //     this.props.setUser(user);
+        //     // this.props.authUser(user);
+        //     browserHistory.push(`/`)
+        // } else {
+        //     alert("User with such login already exists")
+        //     alert("Come up with another username")
+        //
+        // }
         //     let str = JSON.stringify(user);
         //     if (login.length > 0 && password.length >= 6 && email.length > 0) {
         //         if (!localStorage.getItem(login)) {
@@ -37,6 +47,7 @@ export default class Form extends Component {
     }
 
     render() {
+
         return (
             <div>
                 <form className="form-signin">
@@ -77,9 +88,9 @@ export default class Form extends Component {
                            }}
                     />
                 </form>
-                <button type="button"
-                        className="btn btn-lg btn-danger btn-block"
-                        onClick={this.registration}>Sign Up
+                <button  type="button"
+                      className="btn btn-lg btn-danger btn-block"
+                      onClick={this.registration}>Sign Up
                 </button>
             </div>
         )

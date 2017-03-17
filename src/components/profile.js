@@ -1,44 +1,28 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router'
-import SignOut from './SignOut'
 export default class Profile extends Component {
     render() {
-        let User = Object.entries(JSON.parse(localStorage.getItem("user")));
-
-        let userProfile = User.map(function (arr) {
-
-            return ( arr.map(function (id, log) {
-                return (
-                    <li className="list-group-item profile" key={log}>{id}</li>
-                )
-            }))
-        });
+        let User = this.props.user.user
         return (
             <div className='container'>
                 <div className="row">
                     <div className="nav column col-xs-10 col-md-6   col-xs-offset-1 col-md-offset-3">
-                        <Link to="/list"
-                              className="btn btn-lg btn-danger "
-                        >List
-                        </Link>
-                        <Link to="#"
-                              className="btn btn-lg btn-danger "
-                        >ChangeProfile
-                        </Link>
+                        {"   "}  <Link to="/list" className="btn btn-lg btn-danger">List</Link>{" "}
+                        <Link to="/changeprofile" className="btn btn-lg btn-danger ">ChangeProfile</Link>
                     </div>
                     <div className="column col-xs-10 col-md-6   col-xs-offset-1 col-md-offset-3 ">
 
                         <ul className="list-group">
                             <h2 className='list-group-heading'>This is data about you</h2>
-                            {userProfile}
+                            <li className="list-group-item">Login: {User.login} </li>
+                            <li className="list-group-item">Password: {User.password} </li>
+                            <li className="list-group-item">Email: {User.email} </li>
+                            <li className="list-group-item">First Name: {User.firstName} </li>
+                            <li className="list-group-item">Last Name: {User.lastName} </li>
                         </ul>
                     </div>
-                    {this.props.children}
-                    <SignOut/>
-
                 </div>
             </div>
         )
     }
 }
-

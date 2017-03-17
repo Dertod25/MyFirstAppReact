@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
-import Link from 'react-router'
-
-export default class User extends Component {
-
+import {bindActionCreators} from 'redux'
+import {connect} from 'react-redux'
+import SignOut from '../components/SignOut'
+import {chengeUser} from '../actions/ChangeUser'
+import {LogOutUser} from '../actions/LogOut'
+class User extends Component {
     static onEnter(nextState, replace) {
-        if (!localStorage.getItem("user")) {
+        if (localStorage.getItem("user") === null) {
             replace('/signin')
         }
     };
@@ -12,10 +14,31 @@ export default class User extends Component {
     render() {
         return (
             <div className='container'>
-                <h1>Welcome</h1>
-                {this.props.children}
+                <div className="row">
+                    <div
+                        className=" column col-xs-10 col-md-6 col-lg-6  col-xs-offset-1 col-md-offset-3 col-lg-offset-3 ">
+                        <div className="row">
+                            <div className=" column col-xs-8"><h1><span className="text1">Welcome to Hell</span></h1>
+                            </div>
+                            <div className=" column col-xs-4"><SignOut LogOutUser={this.props.LogOutUser}/></div>
+                        </div>
+                    </div>
+                    {React.cloneElement(this.props.children, this.props)}
+                </div>
             </div>
         )
     }
 }
-
+function mapStateToProps(state) {
+    return {
+        user: state.user,
+        userList: state.users
+    }
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        chengeUser: bindActionCreators(chengeUser, dispatch),
+        LogOutUser: bindActionCreators(LogOutUser, dispatch)
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(User)
