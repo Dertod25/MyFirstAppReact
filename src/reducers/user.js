@@ -1,6 +1,6 @@
-import {ADD_USER} from '../constants/Users'
-import {OUT_USER} from '../constants/LogOut'
-import {CHANGE_USER} from '../constants/ChangeUser'
+import {ADD_USER,CHANGE_USER,GET_ALL_USERS,OUT_USER} from '../constants/CONST'
+
+
 
 const initialState = {
     user: JSON.parse(localStorage.getItem('user')) || {}

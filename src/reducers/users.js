@@ -1,5 +1,4 @@
-import {ADD_USER} from '../constants/Users'
-import {CHANGE_USER} from '../constants/ChangeUser'
+import {ADD_USER, CHANGE_USER, GET_ALL_USERS, OUT_USER} from '../constants/CONST'
 
 let Users = new Map;
 let lsl = localStorage.length;
@@ -14,14 +13,14 @@ export default function users(state = initialState, action) {
 
     switch (action.type) {
         case ADD_USER:
-            localStorage.setItem(`${action.user.login}`, JSON.stringify(action.user));
-
+            // localStorage.setItem(`${action.user.login}`, JSON.stringify(action.user));
+            console.log(action.user)
             let newMap = new Map(state)
             let newState = newMap.set(action.user.login, action.user);
             return newState;
 
         case CHANGE_USER:
-            localStorage.setItem(`${action.user.login}`, JSON.stringify(action.user));
+            // localStorage.setItem(`${action.user.login}`, JSON.stringify(action.user));
             let newM = new Map(state)
             let newSt = newM.set(action.user.login, action.user);
             return newSt;

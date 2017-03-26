@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import {setUser} from '../actions/AddUser'
+import {setUser} from '../actions/ActionsUsers'
 class Guest extends Component {
     static onEnter(nextState, replace) {
         if (localStorage.getItem("user")) {

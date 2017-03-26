@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import SignOut from '../components/SignOut'
-import {chengeUser} from '../actions/ChangeUser'
-import {LogOutUser} from '../actions/LogOut'
+import {chengeUser,LogOutUser} from '../actions/ActionsUsers'
+
 class User extends Component {
     static onEnter(nextState, replace) {
         if (localStorage.getItem("user") === null) {

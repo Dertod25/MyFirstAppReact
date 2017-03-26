@@ -10,15 +10,15 @@ export default class SignUp extends Component {
         let login = this.login.value;
         let email = this.email.value;
         let password = this.password.value;
-        let firstName = this.firstName.value;
-        let lastName = this.lastName.value;
+        let firstname = this.firstname.value;
+        let lastname = this.lastname.value;
         if (!this.props.userList.get(login)) {
             let user = {
                 login,
                 password,
                 email,
-                firstName,
-                lastName
+                firstname,
+                lastname
             };
             this.props.setUser(user);
             // this.props.authUser(user);
@@ -59,14 +59,14 @@ export default class SignUp extends Component {
                                    className="form-control"
                                    placeholder="First name"
                                    ref={(input) => {
-                                       this.firstName = input;
+                                       this.firstname = input;
                                    }}
                             />
                             <input type="text"
                                    className="form-control"
                                    placeholder="Last name"
                                    ref={(input) => {
-                                       this.lastName = input;
+                                       this.lastname = input;
                                    }}
                             />
                             <input type="password"

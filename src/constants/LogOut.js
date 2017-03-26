@@ -1,1 +1,0 @@
-export const OUT_USER = 'OUT_USER'

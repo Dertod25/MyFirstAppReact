@@ -17,8 +17,8 @@ export default class Profile extends Component {
                             <li className="list-group-item">Login: {User.login} </li>
                             <li className="list-group-item">Password: {User.password} </li>
                             <li className="list-group-item">Email: {User.email} </li>
-                            <li className="list-group-item">First Name: {User.firstName} </li>
-                            <li className="list-group-item">Last Name: {User.lastName} </li>
+                            <li className="list-group-item">First Name: {User.firstname} </li>
+                            <li className="list-group-item">Last Name: {User.lastname} </li>
                         </ul>
                     </div>
                 </div>
