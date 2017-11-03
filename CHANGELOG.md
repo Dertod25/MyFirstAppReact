@@ -1,3 +1,33 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.1.0...v1.2.0) (2017-11-03)
+
+
+### Bug Fixes
+
+* **local:** change cont.md & pc.json ([096f690](https://github.com/Dertod25/MyFirstAppReact/commit/096f690))
+
+
+### Features
+
+* **CONTRIBUTING.md:** add CONTRIBUTING.md ([ea95e0e](https://github.com/Dertod25/MyFirstAppReact/commit/ea95e0e))
+
+
+
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/Dertod25/MyFirstAppReact/compare/v1.1.0...v1.1.1) (2017-11-03)
+
+
+### Bug Fixes
+
+* **local:** change cont.md & pc.json ([096f690](https://github.com/Dertod25/MyFirstAppReact/commit/096f690))
+
+
+### Features
+
+* **CONTRIBUTING.md:** add CONTRIBUTING.md ([ea95e0e](https://github.com/Dertod25/MyFirstAppReact/commit/ea95e0e))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.0.0...v1.1.0) (2017-11-03)
 
