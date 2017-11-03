@@ -1,25 +1,22 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.0.0...v1.1.0) (2017-11-03)
+
+
+### Features
+
+* **change Contributing:** Please feel free to file merge requests against my GitHub repository. ([c0aa90e](https://github.com/Dertod25/MyFirstAppReact/commit/c0aa90e))
+* **CONTRIBUTING.md:** add CONTRIBUTING.md ([bd374f5](https://github.com/Dertod25/MyFirstAppReact/commit/bd374f5))
+
+
+
 <a name="1.0.1"></a>
-## 1.0.1 (2017-11-03)
+## [1.0.1](https://github.com/Dertod25/MyFirstAppReact/compare/v1.0.0...v1.0.1) (2017-11-03)
 
 
 ### Bug Fixes
 
 * test cglog ([da50b90](https://github.com/Dertod25/MyFirstAppReact/commit/da50b90))
 * **progect:** instal comitizen ([266c785](https://github.com/Dertod25/MyFirstAppReact/commit/266c785))
-
-
-<a name="1.0.0"></a>
-# 1.0.0 (2017-11-03)
-
-* Added server and database ([57baefb](https://github.com/Dertod25/MyFirstAppReact/commit/57baefb))
-* changelog start ([355009e](https://github.com/Dertod25/MyFirstAppReact/commit/355009e))
-* deleted unused files ([df91036](https://github.com/Dertod25/MyFirstAppReact/commit/df91036))
-* fgfg ([2ca22e9](https://github.com/Dertod25/MyFirstAppReact/commit/2ca22e9))
-* Initial commit of the project ([4f0b390](https://github.com/Dertod25/MyFirstAppReact/commit/4f0b390))
-* many changes ([fb1f048](https://github.com/Dertod25/MyFirstAppReact/commit/fb1f048))
-* redux install ([d091b67](https://github.com/Dertod25/MyFirstAppReact/commit/d091b67))
-* reliz ([3ff9100](https://github.com/Dertod25/MyFirstAppReact/commit/3ff9100))
-* Test changelog ([543ee1f](https://github.com/Dertod25/MyFirstAppReact/commit/543ee1f))
 
 
 
