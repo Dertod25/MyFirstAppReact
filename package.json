@@ -9,6 +9,9 @@
   },
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "corp-release": "corp-semantic-release"
+  },
   "dependencies": {
     "axios": "^0.9.1",
     "bluebird": "^3.5.0",
@@ -32,6 +35,7 @@
     "babel-preset-es2017": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
+    "corp-semantic-release": "^6.4.0",
     "cz-conventional-changelog": "^2.1.0",
     "npm-install-webpack-plugin": "^2.0.2",
     "react-hot-loader": "^1.3.0",
