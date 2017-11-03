@@ -1,3 +1,13 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/Dertod25/MyFirstAppReact/compare/v1.2.0...v1.2.1) (2017-11-03)
+
+
+### Bug Fixes
+
+* **local:** add test ([d85f6d6](https://github.com/Dertod25/MyFirstAppReact/commit/d85f6d6))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.1.0...v1.2.0) (2017-11-03)
 
