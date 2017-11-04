@@ -1,3 +1,13 @@
+<a name="1.4.2"></a>
+## [1.4.2](https://github.com/Dertod25/MyFirstAppReact/compare/v1.4.1...v1.4.2) (2017-11-04)
+
+
+### Bug Fixes
+
+* zxcvxc ([77db956](https://github.com/Dertod25/MyFirstAppReact/commit/77db956))
+
+
+
 <a name="1.4.1"></a>
 ## [1.4.1](https://github.com/Dertod25/MyFirstAppReact/compare/v1.4.0...v1.4.1) (2017-11-04)
 
