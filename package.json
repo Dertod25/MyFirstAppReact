@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "corp-release": "corp-semantic-release"
+    "release": "corp-semantic-release"
   },
   "author": "",
   "license": "ISC",
