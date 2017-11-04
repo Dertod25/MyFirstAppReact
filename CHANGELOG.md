@@ -1,3 +1,23 @@
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.2.1...v1.4.0) (2017-11-04)
+
+
+### Features
+
+* **project:** add in project the helpers ([0cab9d1](https://github.com/Dertod25/MyFirstAppReact/commit/0cab9d1))
+
+
+
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.2.1...v1.3.0) (2017-11-04)
+
+
+### Features
+
+* **project:** add in project the helpers ([0cab9d1](https://github.com/Dertod25/MyFirstAppReact/commit/0cab9d1))
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/Dertod25/MyFirstAppReact/compare/v1.2.0...v1.2.1) (2017-11-03)
 
