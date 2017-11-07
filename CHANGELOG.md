@@ -2,6 +2,24 @@
 
 Changelog for Dertod meis-changelog.
 
+## Unreleased
+### Jira MEIS-83
+
+**MEIS-83 jira**
+
+
+[ba23f1e5656e6f4](https://bitbucket.org/Dertod/meis-changelog/commits/ba23f1e5656e6f47076d8709623fd4dd4559d660) yaroslav *2017-11-07 11:59:57*
+
+
+## v0.0.4
+### No issue
+
+**test(project): test Jira**
+
+
+[15fc0d691cc129e](https://bitbucket.org/Dertod/meis-changelog/commits/15fc0d691cc129edf8a50389997bb552faeee4a1) yaroslav *2017-11-07 11:31:08*
+
+
 ## v0.0.3
 ### No issue
 
@@ -42,3 +60,4 @@ Changelog for Dertod meis-changelog.
 
 
 [c4239933ee0135e](https://bitbucket.org/Dertod/meis-changelog/commits/c4239933ee0135e4f46618c4e2b69a7c4eef7956) yaroslav *2017-11-07 06:42:34*
+
