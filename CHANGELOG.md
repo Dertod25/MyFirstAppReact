@@ -1,82 +1,44 @@
-<a name="1.4.0"></a>
-# [1.4.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.2.1...v1.4.0) (2017-11-04)
+# Changelog
+
+Changelog for Dertod meis-changelog.
+
+## v0.0.3
+### No issue
+
+**docs(project): add CONTRIBUTING.md**
 
 
-### Features
-
-* **project:** add in project the helpers ([0cab9d1](https://github.com/Dertod25/MyFirstAppReact/commit/0cab9d1))
+[14faa1b928167ac](https://bitbucket.org/Dertod/meis-changelog/commits/14faa1b928167ac34159027e9fa5b2fde17f974f) yaroslav *2017-11-07 10:47:31*
 
 
+## v0.0.2
+### No issue
 
-<a name="1.3.0"></a>
-# [1.3.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.2.1...v1.3.0) (2017-11-04)
-
-
-### Features
-
-* **project:** add in project the helpers ([0cab9d1](https://github.com/Dertod25/MyFirstAppReact/commit/0cab9d1))
+**fix(local): changing test**
 
 
-
-<a name="1.2.1"></a>
-## [1.2.1](https://github.com/Dertod25/MyFirstAppReact/compare/v1.2.0...v1.2.1) (2017-11-03)
+[7054b98a7bdcb5b](https://bitbucket.org/Dertod/meis-changelog/commits/7054b98a7bdcb5b6feaa84130504c1e568b7b6ff) yaroslav *2017-11-07 10:04:21*
 
 
-### Bug Fixes
+## v0.0.1
+### No issue
 
-* **local:** add test ([d85f6d6](https://github.com/Dertod25/MyFirstAppReact/commit/d85f6d6))
-
-
-
-<a name="1.2.0"></a>
-# [1.2.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.1.0...v1.2.0) (2017-11-03)
+**feat(projekt): instal commitizen**
 
 
-### Bug Fixes
+[e34869510f29bf5](https://bitbucket.org/Dertod/meis-changelog/commits/e34869510f29bf59df5d112f7a64b035e5736d01) yaroslav *2017-11-07 09:38:53*
 
-* **local:** change cont.md & pc.json ([096f690](https://github.com/Dertod25/MyFirstAppReact/commit/096f690))
-
-
-### Features
-
-* **CONTRIBUTING.md:** add CONTRIBUTING.md ([ea95e0e](https://github.com/Dertod25/MyFirstAppReact/commit/ea95e0e))
+**test jenkins auto bild**
 
 
+[c83187984b10fd0](https://bitbucket.org/Dertod/meis-changelog/commits/c83187984b10fd0ce74b8761a3434cf4e4e6e35c) yaroslav *2017-11-07 07:04:47*
 
-<a name="1.1.1"></a>
-## [1.1.1](https://github.com/Dertod25/MyFirstAppReact/compare/v1.1.0...v1.1.1) (2017-11-03)
-
-
-### Bug Fixes
-
-* **local:** change cont.md & pc.json ([096f690](https://github.com/Dertod25/MyFirstAppReact/commit/096f690))
+**Jenkins webhook work**
 
 
-### Features
+[f29aded8103ea09](https://bitbucket.org/Dertod/meis-changelog/commits/f29aded8103ea0910566ef524cdc9799a61e2952) yaroslav *2017-11-07 06:49:27*
 
-* **CONTRIBUTING.md:** add CONTRIBUTING.md ([ea95e0e](https://github.com/Dertod25/MyFirstAppReact/commit/ea95e0e))
-
-
-
-<a name="1.1.0"></a>
-# [1.1.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.0.0...v1.1.0) (2017-11-03)
+**test webhook jenkins**
 
 
-### Features
-
-* **change Contributing:** Please feel free to file merge requests against my GitHub repository. ([c0aa90e](https://github.com/Dertod25/MyFirstAppReact/commit/c0aa90e))
-* **CONTRIBUTING.md:** add CONTRIBUTING.md ([bd374f5](https://github.com/Dertod25/MyFirstAppReact/commit/bd374f5))
-
-
-
-<a name="1.0.1"></a>
-## [1.0.1](https://github.com/Dertod25/MyFirstAppReact/compare/v1.0.0...v1.0.1) (2017-11-03)
-
-
-### Bug Fixes
-
-* test cglog ([da50b90](https://github.com/Dertod25/MyFirstAppReact/commit/da50b90))
-* **progect:** instal comitizen ([266c785](https://github.com/Dertod25/MyFirstAppReact/commit/266c785))
-
-
-
+[c4239933ee0135e](https://bitbucket.org/Dertod/meis-changelog/commits/c4239933ee0135e4f46618c4e2b69a7c4eef7956) yaroslav *2017-11-07 06:42:34*
