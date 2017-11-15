@@ -2,7 +2,9 @@
 
 ##### New Features
 
-* **local:** test unrelease ([4bd37b16](https://github.com/lob/generate-changelog/commit/4bd37b167a70523620cb9383b67c3738baf959ed))
+* **local:**
+  * generate changelog ([074ba6b6](https://github.com/lob/generate-changelog/commit/074ba6b6ed37583004995e6c67bd65f6e824e4ba))
+  * test unrelease ([4bd37b16](https://github.com/lob/generate-changelog/commit/4bd37b167a70523620cb9383b67c3738baf959ed))
 * gddgf ([eb54a65d](https://github.com/lob/generate-changelog/commit/eb54a65d4809b1d48cfd35176764d612a7791aba))
 * test types commit ([dfcd9a3a](https://github.com/lob/generate-changelog/commit/dfcd9a3a806748baa83840242b9411487ed11a09))
 
