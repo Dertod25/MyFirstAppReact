@@ -2,6 +2,7 @@
 
 ##### Bug Fixes
 
-* test unreleased ([6249c5b7](https://github.com/Dertod25/MyFirstAppReact/commit/6249c5b7fade0460db1ed256176826038d3cba51))
-* test generate changelog test ([31ea1c03](https://github.com/Dertod25/MyFirstAppReact/commit/31ea1c03e23c167d561bc0d53d29f1c37e641149))
+* undefined (0undefined2undefined5undefined)
+* undefined (0undefined2undefined5undefined)
+* undefined (0undefined2undefined5undefined)
 

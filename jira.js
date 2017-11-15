@@ -9,10 +9,10 @@ var jira = new JiraClient( {
 });
 
 jira.issue.getIssue({
-  issueKey: 'MEIS-249'
+  issueKey: 'MEIS-83'
 }, function(error, issue) {
 
-    var commit=`fix: ${issue.key} \n ${issue.fields.summary}`;
+    var commit=`fix: ${issue.key} \n\n ${issue.fields.summary}`;
 
     exec(`git add . && git commit -m"${commit}"`)
 });
