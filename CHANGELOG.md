@@ -1,49 +1,84 @@
-# Changelog
-
-Changelog for Dertod meis-changelog.
-
-## v2.0.0
-### Jira MEIS-83
-
-**BUG: output message to the console about the version
-BREAKING CHANGE: testing breaking changes**
-[7d20b7edc6c0563](https://bitbucket.org/Dertod/meis-changelog/commits/7d20b7edc6c05635aaf7277a4df6514a98871696) yaroslav *2017-11-13 11:09:29*
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/Dertod25/MyFirstAppReact/compare/v2.0.0...v1.4.0) (2017-11-15)
 
 
-## v1.1.1
-### Jira MEIS-83
+### Bug Fixes
 
-**IMPROVEMENT: refactor commit in project**
-[0aa487fc35e23e0](https://bitbucket.org/Dertod/meis-changelog/commits/0aa487fc35e23e0e13f0f4df18431d23612eb197) yaroslav *2017-11-13 10:56:47*
+* xdvxc ([c2387f6](https://github.com/Dertod25/MyFirstAppReact/commit/c2387f6))
 
 
-## v1.1.0
-### Jira MEIS-83
+### Features
 
-**FEATURE: yyyyyyyyyyyyyyyy**
-[160317d134e82cd](https://bitbucket.org/Dertod/meis-changelog/commits/160317d134e82cd19c1a1bd236f4bb590729f4bb) yaroslav *2017-11-13 10:42:09*
-
-
-## v1.0.0
-### Jira MEIS-83
-
-**BUG: types commit**
-[183e4610ea0fda9](https://bitbucket.org/Dertod/meis-changelog/commits/183e4610ea0fda93c7c8120e345d3c9f563d4e5e) yaroslav *2017-11-13 08:55:16*
-
-**BUG: testing and refactor commit**
-[2b5eb627c6ff458](https://bitbucket.org/Dertod/meis-changelog/commits/2b5eb627c6ff458d3da7b0e05e7ceae1d06ab3fa) yaroslav *2017-11-13 08:17:58*
+* gddgf ([eb54a65](https://github.com/Dertod25/MyFirstAppReact/commit/eb54a65))
+* test types commit ([dfcd9a3](https://github.com/Dertod25/MyFirstAppReact/commit/dfcd9a3))
 
 
-## v0.5.0
-### Jira MEIS-83
 
-**BUG: testing commit cz**
-[b79ad4b9808f2df](https://bitbucket.org/Dertod/meis-changelog/commits/b79ad4b9808f2dfaeb33e86f21fa73761ed7a855) yaroslav *2017-11-10 15:04:00*
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.4.0...v2.0.0) (2017-11-13)
 
 
-## v0.3.5
-### Jira MEIS-83
+### Bug Fixes
 
-****
-[bbba2e6822ed585](https://bitbucket.org/Dertod/meis-changelog/commits/bbba2e6822ed585c1de01958779c726867d6d92a) yaroslav *2017-11-10 11:08:29*
+* sdgsdgdsf ([f116cc5](https://github.com/Dertod25/MyFirstAppReact/commit/f116cc5))
+
+
+### Performance Improvements
+
+* **project:** MEIS-83 ([3000b43](https://github.com/Dertod25/MyFirstAppReact/commit/3000b43)), closes [#83](https://github.com/Dertod25/MyFirstAppReact/issues/83)
+
+
+### BREAKING CHANGES
+
+* **project:** Del test
+
+
+
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.2.1...v1.4.0) (2017-11-04)
+
+
+### Features
+
+* **project:** add in project the helpers ([0cab9d1](https://github.com/Dertod25/MyFirstAppReact/commit/0cab9d1))
+
+
+
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/Dertod25/MyFirstAppReact/compare/v1.2.0...v1.2.1) (2017-11-03)
+
+
+### Bug Fixes
+
+* **local:** add test ([d85f6d6](https://github.com/Dertod25/MyFirstAppReact/commit/d85f6d6))
+
+
+
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.1.0...v1.2.0) (2017-11-03)
+
+
+### Bug Fixes
+
+* **local:** change cont.md & pc.json ([096f690](https://github.com/Dertod25/MyFirstAppReact/commit/096f690))
+
+
+
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/Dertod25/MyFirstAppReact/compare/v1.0.0...v1.1.0) (2017-11-03)
+
+
+### Bug Fixes
+
+* test cglog ([da50b90](https://github.com/Dertod25/MyFirstAppReact/commit/da50b90))
+* **progect:** instal comitizen ([266c785](https://github.com/Dertod25/MyFirstAppReact/commit/266c785))
+
+
+### Features
+
+* **change Contributing:** Please feel free to file merge requests against my GitHub repository. ([c0aa90e](https://github.com/Dertod25/MyFirstAppReact/commit/c0aa90e))
+* **CONTRIBUTING.md:** add CONTRIBUTING.md ([bd374f5](https://github.com/Dertod25/MyFirstAppReact/commit/bd374f5))
+* **CONTRIBUTING.md:** add CONTRIBUTING.md ([ea95e0e](https://github.com/Dertod25/MyFirstAppReact/commit/ea95e0e))
+
+
 

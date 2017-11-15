@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "cli": "node ./node_modules/conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "corp-release": "corp-semantic-release",
     "version": "node version.js"
   },
