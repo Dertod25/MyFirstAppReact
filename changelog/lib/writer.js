@@ -7,7 +7,7 @@ var TYPES = {
   Feature: 'New Features',
   Bug: 'Bug Fixes',
   other: 'Other Changes',
-  Improvement: 'Performance Improvements',
+  Improvement: 'Improvements',
 };
 var divider = '-------------';
 var changeLogFile = 'CHANGELOG.md';

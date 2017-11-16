@@ -6,6 +6,10 @@
 
 *  Not redirected to the day in the program and is not validated if the field is empty on the form of creating and editing a program ([MEIS-200](https://jira.kingmuffin.com/browse/MEIS-200))
 
+##### Improvements
+
+*  Company page ([MEIS-211](https://jira.kingmuffin.com/browse/MEIS-211))
+
 -------------
 ##  v1.0.0 (2017-11-16)
 
