@@ -107,7 +107,7 @@ exports.markdown = function (release, commits) {
         release ? content.push('\n') : content.push(divider);
          content.push(oldChangelogArr[1].replace(/^\n*/,''));
     }else if(oldChangelog.indexOf('#### Unreleased')===-1) {
-      oldChangelog.length>0 && content.push(divider)&&content.push(oldChangelog);
+      oldChangelog.length>0 && content.push(divider)&&content.push(oldChangelog.replace(/^# CHANGELOG\n*/,''));
     }
       if (release) {
           return {content: content.join('\n'), tag: release.version};

@@ -9,9 +9,9 @@ var jira = new JiraClient( {
 });
 
 jira.issue.getIssue({
-  issueKey: 'MEIS-200'
+  issueKey: 'MEIS-211'
 }, function(error, issue) {
 
-    var commit=`Bug: ${issue.key} \n\n ${issue.fields.summary}`;
+    var commit=`Improvement: ${issue.key} \n\n ${issue.fields.summary}`;
     exec(`git add . && git commit -m"${commit}"`)
 });
