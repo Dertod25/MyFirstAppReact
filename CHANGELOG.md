@@ -3,6 +3,11 @@
 
 ####Unreleased  (2017-11-16)
 
+##### Bug Fixes
+
+*  503 during deployment ([MEIS-100](https://jira.kingmuffin.com/browse/MEIS-100))
+    - BREAKING CHANGE: this major version
+
 ##### New Features
 
 *  AMAP in reps (not 0) ([MEIS-212](https://jira.kingmuffin.com/browse/MEIS-212))
