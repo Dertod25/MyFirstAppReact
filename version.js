@@ -33,8 +33,8 @@ var config= {
 
 
 exports.version = function () {
-
-    return conventionalRecommendedBump({
+  var version;
+    conventionalRecommendedBump({
         config: config
     }, function (err, result) {
         exec("semver-tags --last",
@@ -62,10 +62,11 @@ exports.version = function () {
                     default:
                         console.log('exec error: ' + error);
                 }
-                return str
+                version= str
               /*str && exec(`git tag ${str} && git push --tags`)*/
             });
     });
+return version
 };
 
 
