@@ -12,7 +12,7 @@ jira.issue.getIssue({
   issueKey: 'MEIS-229'
 }, function(error, issue) {
 
-    var commit=`Bug: ${issue.key} \n\n ${issue.fields.summary}`;
+    var commit=`Feature: ${issue.key} \n\n ${issue.fields.summary}`;
 
     exec(`git add . && git commit -m"${commit}"`)
 });
