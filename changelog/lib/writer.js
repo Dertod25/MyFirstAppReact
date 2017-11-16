@@ -39,11 +39,11 @@ exports.markdown = function (release, commits) {
   var heading;
 
     if (release && release.type === 'major') {
-    heading = '##';
+    heading = '## ';
     } else if (release && release.type === 'minor') {
-    heading = '###';
+    heading = '### ';
   } else {
-    heading = '####';
+    heading = '#### ';
   }
 
     if (release && release.version) {
