@@ -9,7 +9,7 @@ var jira = new JiraClient( {
 });
 
 jira.issue.getIssue({
-  issueKey: 'MEIS-216'
+  issueKey: 'MEIS-220'
 }, function(error, issue) {
 
     var commit=`Feature: ${issue.key} \n\n ${issue.fields.summary}`;
