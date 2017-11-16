@@ -32,40 +32,40 @@ var config= {
 };
 
 
-exports.version = conventionalRecommendedBump({
-  config: config
-}, function(err, result) {
-  exec("semver-tags --last",
-      function (error, version) {
-          var str;
-          var v = 'v0.0.0'
-          if (version) {
-              v = version
-          }
+exports.version = function () {
 
+    return conventionalRecommendedBump({
+        config: config
+    }, function (err, result) {
+        exec("semver-tags --last",
+            function (error, version) {
+                var str;
+                var v = 'v0.0.0'
+                if (version) {
+                    v = version
+                }
 
-      switch (result.level) {
-        case 0:
-          str = 'v' + (+v[1] + 1) + '.' + 0 + '.' + 0;
-          break;
-        case 1:
-          str = 'v' + v[1] + '.' + (+v[3] + 1) + '.' + 0;
-          break;
-        case 2:
-          str = 'v' + v[1] + '.' + v[3] + '.' + (+v[5] + 1);
-          break;
-        case 3:
-          console.log(`Your version ${v} does not need to be updated`);
-          break;
+                switch (result.level) {
+                    case 0:
+                        str = 'v' + (+v[1] + 1) + '.' + 0 + '.' + 0;
+                        break;
+                    case 1:
+                        str = 'v' + v[1] + '.' + (+v[3] + 1) + '.' + 0;
+                        break;
+                    case 2:
+                        str = 'v' + v[1] + '.' + v[3] + '.' + (+v[5] + 1);
+                        break;
+                    case 3:
+                        console.log(`Your version ${v} does not need to be updated`);
+                        break;
 
-        default:
-          console.log('exec error: ' + error);
-      }
-          return str
-        /*str && exec(`git tag ${str} && git push --tags`)*/
+                    default:
+                        console.log('exec error: ' + error);
+                }
+                return str
+              /*str && exec(`git tag ${str} && git push --tags`)*/
+            });
     });
-});
-
-
+};
 
 

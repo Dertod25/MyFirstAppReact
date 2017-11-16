@@ -16,7 +16,7 @@ var Writer  = require('./writer');
  * @param {Array} options.exclude - exclude listed commit types (e.g. ['chore', 'style', 'refactor'])
  * @returns {Promise<String>} the \n separated changelog string
  */
-exports.generate = function (options) {
+exports.unrelease = function (options) {
   return Bluebird.all([
     Package.extractRepoUrl(),
     Package.calculateNewVersion(options),
@@ -27,4 +27,17 @@ exports.generate = function (options) {
 
     return Writer.markdown(null, commits, options);
   });
+};
+
+exports.release = function (options) {
+    return Bluebird.all([
+        Package.extractRepoUrl(),
+        Package.calculateNewVersion(options),
+        Git.getCommits(options)
+    ])
+        .spread(function (repoUrl, version, commits) {
+            options.repoUrl = options.repoUrl || repoUrl;
+
+            return Writer.markdown(null, commits, options);
+        });
 };
