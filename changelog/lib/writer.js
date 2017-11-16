@@ -11,17 +11,7 @@ var TYPES = {
 };
 var divider = '-------------';
 var changeLogFile = 'CHANGELOG.md';
-/**
- * Generate the markdown for the changelog.
- * @param {String} version - the new version affiliated to this changelog
- * @param {Array<Object>} commits - array of parsed commit objects
- * @param {Object} options - generation options
- * @param {Boolean} options.patch - whether it should be a patch changelog
- * @param {Boolean} options.minor - whether it should be a minor changelog
- * @param {Boolean} options.major - whether it should be a major changelog
- * @param {String} options.repoUrl - repo URL that will be used when linking commits
- * @returns {Promise<String>} the \n separated changelog string
- */
+
 
 function getChangeLog(){
   if (!fs.existsSync(changeLogFile)) {
@@ -31,8 +21,15 @@ function getChangeLog(){
 }
 
 
-exports.markdown = function (version, commits, options) {
-
+exports.markdown = function (release, commits) {
+    var filterCommits = [];
+    commits.map((commit, i) => {
+        if (i === 0) {
+            filterCommits.push(commit)
+        } else if (!filterCommits.some(elem => commit.subject === elem.subject)) {
+            filterCommits.push(commit)
+        }
+    })
   var oldChangelog = getChangeLog();
   var oldChangelogArr= oldChangelog.split(divider);
 
@@ -41,16 +38,16 @@ exports.markdown = function (version, commits, options) {
   var date = new Date().toJSON().slice(0, 10);
   var heading;
 
-  if (options && options.major) {
+    if (release && release.type === 'major') {
     heading = '##';
-  } else if (options && options.minor) {
+    } else if (release && release.type === 'minor') {
     heading = '###';
   } else {
     heading = '####';
   }
 
-  if (version) {
-    heading += ' ' + version + ' (' + date + ')';
+    if (release && release.version) {
+        heading += ' ' + release.version + ' (' + date + ')';
   } else {
     heading += 'Unreleased ' + ' (' + date + ')';
   }
@@ -58,7 +55,7 @@ exports.markdown = function (version, commits, options) {
   content.push(heading);
   content.push('');
 
-  return Bluebird.resolve(commits)
+  return Bluebird.resolve(filterCommits)
   .bind({ types: {} })
   .each(function (commit) {
     var type = TYPES[commit.type] ? commit.type : DEFAULT_TYPE;
@@ -98,7 +95,7 @@ exports.markdown = function (version, commits, options) {
 
         content.push(prefix + ' ' + commit.body + ' (' + shorthash + ')');
         if(commit.notes){
-          content.push('-'+commit.notes)
+            content.push('    -' + commit.notes.replace(/^\n*/, '').replace(/\n$/m, ''))
         }
       });
     });
@@ -107,12 +104,14 @@ exports.markdown = function (version, commits, options) {
   })
   .then(function () {
     if(oldChangelogArr[1]){
-         version?content.push('\n'):content.push(divider);
+        release ? content.push('\n') : content.push(divider);
          content.push(oldChangelogArr[1].replace(/^\n*/,''));
     }else if(oldChangelog.indexOf('####Unreleased')===-1) {
       oldChangelog.length>0 && content.push(divider)&&content.push(oldChangelog);
     }
-
+      if (release) {
+          return {content: content.join('\n'), tag: release.version};
+      }
     return content.join('\n');
   });
 };

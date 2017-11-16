@@ -57,7 +57,7 @@ exports.getCommits = function (options) {
     commit.hash = lines.shift();
     commit.subject = lines.shift();
     commit.body = lines.shift();
-    commit.notes = lines.shift();
+    commit.notes = lines.join('\n');
 
     var parsed = commit.subject.match(COMMIT_PATTERN);
 
@@ -68,7 +68,7 @@ exports.getCommits = function (options) {
     commit.type = parsed[1];
     commit.category = parsed[3] || '';
     commit.subject = parsed[4];
-      console.log(commit)
+/*      console.log(commit)*/
     return commit;
   })
   .filter(function (commit) {

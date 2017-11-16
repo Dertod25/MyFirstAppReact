@@ -3,17 +3,10 @@
 
 ####Unreleased  (2017-11-16)
 
-##### Bug Fixes
-
-*  Add movement pattern ([MEIS-229](https://jira.kingmuffin.com/browse/MEIS-229))
-
 ##### New Features
 
 *  AMAP in reps (not 0) ([MEIS-212](https://jira.kingmuffin.com/browse/MEIS-212))
-*  AMAP in reps (not 0) ([MEIS-212](https://jira.kingmuffin.com/browse/MEIS-212))
-*  AMAP in reps (not 0) ([MEIS-212](https://jira.kingmuffin.com/browse/MEIS-212))
-*  AMAP in reps (not 0) ([MEIS-212](https://jira.kingmuffin.com/browse/MEIS-212))
-*  AMAP in reps (not 0) ([MEIS-212](https://jira.kingmuffin.com/browse/MEIS-212))
+    - BREAKING CHANGE: this major version
 *  The email of the invited coach is displayed under the field Email in the coach profile ([MEIS-235](https://jira.kingmuffin.com/browse/MEIS-235))
 *  Add movement pattern ([MEIS-229](https://jira.kingmuffin.com/browse/MEIS-229))
 *  Update react-16 ([MEIS-220](https://jira.kingmuffin.com/browse/MEIS-220))

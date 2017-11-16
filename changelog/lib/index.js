@@ -1,44 +1,24 @@
 'use strict';
 
 var Bluebird = require('bluebird');
-
 var Git     = require('./git');
-var Package = require('./package');
+var Package = require('./version');
 var Writer  = require('./writer');
 
-/**
- * Generate the changelog.
- * @param {Object} options - generation options
- * @param {Boolean} options.patch - whether it should be a patch changelog
- * @param {Boolean} options.minor - whether it should be a minor changelog
- * @param {Boolean} options.major - whether it should be a major changelog
- * @param {String} options.repoUrl - repo URL that will be used when linking commits
- * @param {Array} options.exclude - exclude listed commit types (e.g. ['chore', 'style', 'refactor'])
- * @returns {Promise<String>} the \n separated changelog string
- */
-exports.unrelease = function (options) {
+exports.unrelease = function () {
   return Bluebird.all([
-    Git.getCommits(options)
+    Git.getCommits()
   ])
   .spread(function (commits) {
-    return Writer.markdown(null, commits, options);
+    return Writer.markdown(null, commits);
   });
 };
 
-/*exports.release = function (options) {
+exports.release = function () {
     return Bluebird.all([
-        Git.getCommits(options)
+        Git.getCommits()
     ])
         .spread(function (commits) {
-            return Writer.markdown('v2.1.0', commits, options);
-        });
-};*/
-
-exports.release = function (options) {
-    return Bluebird.all([
-        Git.getCommits(options)
-    ])
-        .spread(function (commits) {
-            return Package.calculateNewVersion(commits).then((version)=> Writer.markdown(version, commits, options));
+            return Package.calculateNewVersion(commits).then((release)=> Writer.markdown(release, commits));
         });
 };
