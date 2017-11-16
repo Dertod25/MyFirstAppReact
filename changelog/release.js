@@ -5,5 +5,5 @@ return Changelog.release()
     .then(function (changelog) {
         Fs.writeFileSync('CHANGELOG.md', changelog.content);
         exec(`git tag ${changelog.tag} && git push --tags &&
-       npm version --no-git-tag-version ${changelog.tag} && git add package.json && git commit -m "Release ${changelog.tag}"`)
+       npm version --no-git-tag-version ${changelog.tag} && git add . && git commit -m "Release ${changelog.tag}"`)
     });

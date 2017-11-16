@@ -34,7 +34,7 @@ exports.markdown = function (release, commits) {
   var oldChangelogArr= oldChangelog.split(divider);
 
   var content = [];
-  content.push('# CHANGELOG\n==========\n')
+  content.push('# CHANGELOG\n')
   var date = new Date().toJSON().slice(0, 10);
   var heading;
 
