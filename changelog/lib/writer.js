@@ -34,7 +34,7 @@ exports.markdown = function (release, commits) {
   var oldChangelogArr= oldChangelog.split(divider);
 
   var content = [];
-  content.push('#CHANGELOG\n==========\n')
+  content.push('# CHANGELOG\n==========\n')
   var date = new Date().toJSON().slice(0, 10);
   var heading;
 
@@ -106,7 +106,7 @@ exports.markdown = function (release, commits) {
     if(oldChangelogArr[1]){
         release ? content.push('\n') : content.push(divider);
          content.push(oldChangelogArr[1].replace(/^\n*/,''));
-    }else if(oldChangelog.indexOf('####Unreleased')===-1) {
+    }else if(oldChangelog.indexOf('#### Unreleased')===-1) {
       oldChangelog.length>0 && content.push(divider)&&content.push(oldChangelog);
     }
       if (release) {
