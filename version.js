@@ -31,7 +31,8 @@ var config= {
   }
 };
 
-var version=1;
+var version
+
 conventionalRecommendedBump({
     config: config
 }, function (err, result) {
