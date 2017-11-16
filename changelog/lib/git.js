@@ -44,6 +44,7 @@ exports.getCommits = function (options) {
     throw new Error('no commits found');
   })
   .then(function (commits) {
+
     return commits.split('\n' + SEPARATOR + '\n');
   })
   .map(function (raw) {
@@ -56,6 +57,7 @@ exports.getCommits = function (options) {
     commit.hash = lines.shift();
     commit.subject = lines.shift();
     commit.body = lines.shift();
+    commit.notes = lines.shift();
 
     var parsed = commit.subject.match(COMMIT_PATTERN);
 
@@ -66,7 +68,7 @@ exports.getCommits = function (options) {
     commit.type = parsed[1];
     commit.category = parsed[3] || '';
     commit.subject = parsed[4];
-    
+      console.log(commit)
     return commit;
   })
   .filter(function (commit) {
@@ -74,5 +76,5 @@ exports.getCommits = function (options) {
       return false;
     }
     return options.exclude ? options.exclude.indexOf(commit.type) === -1 : true;
-  });
+  }).filter((commit)=>commit.type==='Feature'||commit.type==='Bug'||commit.type==='Improvement');
 };

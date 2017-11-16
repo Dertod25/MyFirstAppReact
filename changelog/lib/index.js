@@ -18,26 +18,27 @@ var Writer  = require('./writer');
  */
 exports.unrelease = function (options) {
   return Bluebird.all([
-    Package.extractRepoUrl(),
-    Package.calculateNewVersion(options),
     Git.getCommits(options)
   ])
-  .spread(function (repoUrl, version, commits) {
-    options.repoUrl = options.repoUrl || repoUrl;
-
+  .spread(function (commits) {
     return Writer.markdown(null, commits, options);
   });
 };
 
-exports.release = function (options) {
+/*exports.release = function (options) {
     return Bluebird.all([
-        Package.extractRepoUrl(),
-        Package.calculateNewVersion(options),
         Git.getCommits(options)
     ])
-        .spread(function (repoUrl, version, commits) {
-            options.repoUrl = options.repoUrl || repoUrl;
+        .spread(function (commits) {
+            return Writer.markdown('v2.1.0', commits, options);
+        });
+};*/
 
-            return Writer.markdown(null, commits, options);
+exports.release = function (options) {
+    return Bluebird.all([
+        Git.getCommits(options)
+    ])
+        .spread(function (commits) {
+            return Package.calculateNewVersion(commits).then((version)=> Writer.markdown(version, commits, options));
         });
 };

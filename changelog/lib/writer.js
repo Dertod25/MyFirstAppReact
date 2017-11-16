@@ -10,7 +10,7 @@ var TYPES = {
   Improvement: 'Performance Improvements',
 };
 var divider = '-------------';
-var changeLogFile = './generate-changelog/HYSTORY.md';
+var changeLogFile = 'CHANGELOG.md';
 /**
  * Generate the markdown for the changelog.
  * @param {String} version - the new version affiliated to this changelog
@@ -36,19 +36,14 @@ exports.markdown = function (version, commits, options) {
   var oldChangelog = getChangeLog();
   var oldChangelogArr= oldChangelog.split(divider);
 
-  console.log('oldChangelog',oldChangelog)
-  console.log('oldChangelogArr',oldChangelogArr)
-  console.log('version',version)
-  var filterCommits=commits.filter((commit)=>commit.type==='Feature'||commit.type==='Bug'||commit.type==='Improvement')
-  console.log(filterCommits)
   var content = [];
   content.push('#CHANGELOG\n==========\n')
   var date = new Date().toJSON().slice(0, 10);
   var heading;
 
-  if (options.major) {
+  if (options && options.major) {
     heading = '##';
-  } else if (options.minor) {
+  } else if (options && options.minor) {
     heading = '###';
   } else {
     heading = '####';
@@ -63,7 +58,7 @@ exports.markdown = function (version, commits, options) {
   content.push(heading);
   content.push('');
 
-  return Bluebird.resolve(filterCommits)
+  return Bluebird.resolve(commits)
   .bind({ types: {} })
   .each(function (commit) {
     var type = TYPES[commit.type] ? commit.type : DEFAULT_TYPE;
@@ -98,11 +93,13 @@ exports.markdown = function (version, commits, options) {
       types[type][category].forEach(function (commit) {
         var shorthash = commit.hash.substring(0, 8);
 
-        if (options.repoUrl) {
           shorthash = '[' + commit.subject + '](' +'https://jira.kingmuffin.com/browse/'+ commit.subject + ')';
-        }
+
 
         content.push(prefix + ' ' + commit.body + ' (' + shorthash + ')');
+        if(commit.notes){
+          content.push('-'+commit.notes)
+        }
       });
     });
 
@@ -110,15 +107,12 @@ exports.markdown = function (version, commits, options) {
   })
   .then(function () {
     if(oldChangelogArr[1]){
-         content.push(divider);
+         version?content.push('\n'):content.push(divider);
          content.push(oldChangelogArr[1].replace(/^\n*/,''));
     }else if(oldChangelog.indexOf('####Unreleased')===-1) {
-      content.push(divider);
-      content.push(oldChangelog);
+      oldChangelog.length>0 && content.push(divider)&&content.push(oldChangelog);
     }
 
-    /*    content.push(divider);
-        content.push('##RELEASE VERSION');*/
     return content.join('\n');
   });
 };
