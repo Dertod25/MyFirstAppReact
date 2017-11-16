@@ -6,11 +6,11 @@ var config= {
     var level = 3;
 
     commits.forEach(function(commit) {
-      if (commit.notes.length > 0) {
+      if (commit.notes.length > 0 && (commit.type === 'Feature'||commit.type === 'Bug'||commit.type === 'Improvement')) {
         level = 0;
-      } else if (commit.type === 'feature' && level !==0) {
+      } else if (commit.type === 'Feature' && level !== 0) {
           level = 1;
-      } else if ((commit.type === 'bug' || commit.type === 'improvement') && level !==0 && level !==1) {
+      } else if ((commit.type === 'Bug' || commit.type === 'Improvement') && level !== 0 && level !== 1) {
         level = 2;
       }
     });
@@ -30,13 +30,20 @@ var config= {
     revertCorrespondence: ['header', 'hash']
   }
 };
-conventionalRecommendedBump({
+
+
+exports.version = conventionalRecommendedBump({
   config: config
 }, function(err, result) {
-  console.log(result);
   exec("semver-tags --last",
-    function (error, v) {
-      var str;
+      function (error, version) {
+          var str;
+          var v = 'v0.0.0'
+          if (version) {
+              v = version
+          }
+
+
       switch (result.level) {
         case 0:
           str = 'v' + (+v[1] + 1) + '.' + 0 + '.' + 0;
@@ -54,7 +61,8 @@ conventionalRecommendedBump({
         default:
           console.log('exec error: ' + error);
       }
-      str && exec(`git tag ${str} && git push --tags`)
+          return str
+        /*str && exec(`git tag ${str} && git push --tags`)*/
     });
 });
 

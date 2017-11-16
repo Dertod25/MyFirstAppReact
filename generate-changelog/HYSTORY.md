@@ -15,5 +15,5 @@
 *  Changelog ([MEIS-83](https://jira.kingmuffin.com/browse/MEIS-83))
 
 -------------
-#RELEASE VERSION
+
 

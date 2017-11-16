@@ -1,4 +1,5 @@
 var JiraClient = require('jira-connector');
+var version =require('./version');
 var exec = require('child_process').exec;
 var jira = new JiraClient( {
   host: 'jira.kingmuffin.com',
@@ -9,9 +10,9 @@ var jira = new JiraClient( {
 });
 
 jira.issue.getIssue({
-  issueKey: 'MEIS-229'
+  issueKey: 'MEIS-235'
 }, function(error, issue) {
-
+ console.log(version);
     var commit=`Feature: ${issue.key} \n\n ${issue.fields.summary}`;
 
     exec(`git add . && git commit -m"${commit}"`)
