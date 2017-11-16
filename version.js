@@ -33,7 +33,7 @@ var config= {
 
 
 exports.version = function () {
-  var version;
+  var version=1;
     conventionalRecommendedBump({
         config: config
     }, function (err, result) {
